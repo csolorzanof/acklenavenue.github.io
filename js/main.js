@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     $(function() {
         $('.tabs li').on('click', function() {
             var $panel = $(this).closest('.tab-panels');
@@ -96,6 +95,11 @@ $(document).ready(function() {
             $("#subscribe-email").val("");
         }
 
+        recapchaCallback = function () {
+            var registerBtn = document.querySelector('#button-form');
+            registerBtn.removeAttribute('disabled');
+        }
+
         // mail service
         $("#contact-form").submit(function(e) {
             e.preventDefault();
@@ -108,10 +112,16 @@ $(document).ready(function() {
             };
         $.ajax({
                 type: "POST",
-                url: "http://emailer-3.apphb.com/Mail",
+                url: "https://emailer-3.apphb.com/Mail",
                 data: JSON.stringify(mailModel),
                 contentType: "application/json; charset=utf-8",
                 success: function(msg) {
+                    ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'Contact',
+                        eventAction: 'submit',
+                        eventLabel: 'form'
+                      });
                     $(overlay).delay(1200).fadeOut(600);
                     $(confirmationID).show().delay(2000).fadeOut(300);
                 }
@@ -152,5 +162,55 @@ $(document).ready(function() {
           $(".member-card .member-card__img-container .member-card__img").each(function () {
             $(this).attr("src", "https://www.gravatar.com/avatar/" + md5($(this).attr("alt")) + "?s=400&d=mm");
           });
+
+        // testimonial Slides in Home
+          let slides = document.getElementsByClassName("testimonialSlides");
+          let dots = document.getElementsByClassName("dot");
+          let prev = document.querySelector(".prev");
+          let next = document.querySelector(".next");
+          
+          if (!slides.length == 0) {
+            let slideIndex = 1;
+            showSlides(slideIndex);
+          
+            function plusSlides(n) {
+              showSlides((slideIndex += n))
+            }
+          
+            let currentSlide = function (n) {
+              showSlides((slideIndex = n));
+            };
+          
+            function showSlides(n) {
+              if (n > slides.length) {
+                slideIndex = 1;
+              }
+          
+              if (n < 1) {
+                slideIndex = slides.length;
+              }
+          
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+          
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+          
+              slides[slideIndex - 1].style.display = "block";
+              dots[slideIndex - 1].className += " active";
+            }
+          }
+          
+          prev.addEventListener("click", () => {
+            plusSlides(-1);
+          });
+          
+          next.addEventListener("click", () => {
+            plusSlides(1);
+          });
+          
+
     });
 });

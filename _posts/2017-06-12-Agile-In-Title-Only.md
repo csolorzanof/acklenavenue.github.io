@@ -11,6 +11,7 @@ ImageCredit: Photo by [Braydon Anderson](https://unsplash.com/@braydona) on [Uns
 type: article
 keywords: Acklen Avenue, Agile, start-up, company, company leaders, development, Sprint planning, Burndown charts, Scrum/Kanban boards, Product backlog, Daily meeting, retrospectives
 tags: agile
+hidden: false
 ---
 
 _This is the second post in our Agile Development blog series._
@@ -40,7 +41,7 @@ Let’s briefly discuss what agile is not before we dive into how to figure out 
 
 ## What agile is not
 
-If you want to learn more about what agile is, we wrote about it [here](http://acklenavenue.com/agile/development/2017/04/19/Agile-Development-A-10000-Foot-View.html).
+If you want to learn more about what agile is, we wrote about it [here](http://acklenavenue.com/Agile-Development-A-10000-Foot-View).
 
 Here is what agile is not:
   *Sprint planning

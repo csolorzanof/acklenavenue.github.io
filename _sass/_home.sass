@@ -1,42 +1,46 @@
 header
-  background: $slate-purple url(../img/bg-photo.jpg) no-repeat center bottom
+  background: $slate-purple url(../img/bg-photo-20.jpg) no-repeat center 
   background-size: cover
-  min-height: 800px
+  min-height: 700px
 
   .hero-header
-    max-width: 900px
+    max-width: 1205px
     margin: 0 auto
-    padding-top: 100px
+    padding: 70px 25px 0px
     color: #ffffff
     &__phrase
-      font-weight: 800
+      font-weight: 600
     & h1
       font-weight: 300
       color: $white
       max-width: 33.2em
       padding: 30px 0
-      font-size: $big
+      font-size: 1.2em
+      line-height: 35px
+   
     & p
-      font-size: $banner
+      font-size: 4.8vw
       color: white
     & a
       margin: 0
 
   .first-sentence
     padding: 0 0 20px 0
-    font-weight: 800
+    font-weight: 600
     text-transform: uppercase
 
   .last-sentence
-    padding: 100px 0 20px 0
+    padding: 20px 0 20px 0
     & span
-      font-weight: 800
+      font-weight: 600
       text-transform: uppercase
 
+  .header-secondary-title
+    margin-top: 60px
 
   .down-arrow
     position: absolute
-    bottom: 30px
+    bottom: 135px
     left: 50%
     width: 28px
 
@@ -55,8 +59,8 @@ header
     opacity: 0
     overflow: hidden
     text-transform: uppercase
-    font-size: $banner
-    animation: heroAnimation 34s ease-in infinite 0s
+    font-size: 4.8vw
+    animation: heroAnimation 9s ease-in infinite 0s
 
   .hero-words
     display: inline
@@ -65,49 +69,33 @@ header
         animation-delay: 3s
       &:nth-child(3)
         animation-delay: 6s
-      &:nth-child(4)
-        animation-delay: 9s
-      &:nth-child(5)
-        animation-delay: 12s
-      &:nth-child(6)
-        animation-delay: 15s
-      &:nth-child(7)
-        animation-delay: 18s
-      &:nth-child(8)
-        animation-delay: 21s
-      &:nth-child(9)
-        animation-delay: 24s
-      &:nth-child(10)
-        animation-delay: 27s
-      &:nth-child(11)
-        animation-delay: 30s
 
   @keyframes heroAnimation
     0%
       opacity: 0
       transform: translateY(10%)
 
-    1%
-      transform: translateY(0%)
-
-    2%
-      opacity: 1
-
-    4%
-      opacity: 1
-      transform: translateY(0%)
-
     5%
+      transform: translateY(0%)
+
+    10%
+      opacity: 1
+
+    25%
+      opacity: 1
+      transform: translateY(0%)
+
+    35%
       opacity: 0
 
 
-    6%
+    40%
       transform: translateY(-20%)
 
 #StressFreeWizardry
   max-width: 1100px
   margin: 0 auto
-  padding: 120px 5% 80px
+  padding: 60px 5% 30px
   text-align: center
   color: $black-80
   p
@@ -219,8 +207,24 @@ header
     -moz-transform: rotateY(180deg)
     -ms-transform: rotateY(180deg)
 
+.companies
+  max-width: 1100px
+  margin: 0 auto
+  text-align: center
+  padding: 30px 0
+  
 
-#testimonialSingle
+.companies-container
+  display: flex
+  justify-content: space-evenly
+  flex-wrap: wrap
+  padding: 20px 0px
+
+.companies-container img
+  max-width: 180px
+  margin: 10px
+
+#testimonialSingle, #testimonialSlider
   padding: 40px
   position: relative
 
@@ -229,8 +233,8 @@ header
     position: absolute
     z-index: -1
     width: 100%
-    min-height: 500px
-    top: 30px
+    min-height: 600px
+    top: 60px
     left: 0
     transform: skewY(6deg)
     transform-origin: 0
@@ -240,6 +244,11 @@ header
 
   & .testimonial__contain
     max-width: 640px
+    margin: 0 auto
+    text-align: center
+  
+  & .testimonial__contain--wide
+    max-width: 1040px
     margin: 0 auto
     text-align: center
 
@@ -255,7 +264,7 @@ header
     -webkit-border-radius: 400px
     -moz-border-radius: 400px
     border-radius: 400px
-    box-shadow: 0px 2px 11px 3px rgba(8, 8, 8, 0.35)
+    box-shadow: 0px 2px 11px 3px rgba(8, 8, 8, 0.10)
   h3
     font-size: $big
     font-weight: 800
@@ -277,7 +286,120 @@ header
     color: $black-80
     margin: -53px 0px 30px
 
+#testimonialText
+  padding: 185px 0px
+  position: relative
 
+  &:before
+    content: ""
+    position: absolute
+    z-index: -1
+    width: 100%
+    min-height: 500px
+    top: 50px
+    left: 0
+    transform: skewY(6deg)
+    transform-origin: 0
+    background: $pale-grey
+    border-top: 1px solid rgba(0, 0, 0, 0.12)
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12)
+
+  & .testimonial__contain
+    max-width: 640px
+    margin: 0 auto
+    text-align: center
+  
+  & .testimonial__contain--wide
+    max-width: 1040px
+    margin: 0 auto
+    text-align: center
+
+  .testimonial-founder
+    font-style: italic
+    color: (0,0, 0, 0.5)
+    font-weight: 300
+    text-align: center
+    color: var(--black-50)
+
+  .rouded-img
+    width: 120px
+    -webkit-border-radius: 400px
+    -moz-border-radius: 400px
+    border-radius: 400px
+    box-shadow: 0px 2px 11px 3px rgba(8, 8, 8, 0.10)
+  h3
+    font-size: $big
+    font-weight: 800
+    padding: 25px 0 10px
+  h4
+    font-size: $normal
+    font-weight: 300
+    color: $black-50
+
+  .quotesign
+    font-weight: 800
+    color: $apple-green
+    font-size: $quoteSign
+    padding-top: 30px
+  p
+    font-size: $title
+    line-height: 43px
+    font-weight: 300
+    color: $black-80
+    margin: -53px 0px 30px
+
+.slideshow-container 
+  position: relative
+  max-width: 90%
+  margin: 0 auto
+  min-height: 600px
+
+  .testimonialSlides
+    display: none
+    padding: 2rem 5rem 0 5rem
+    text-align: center
+  .prev, .next
+    cursor: pointer
+    position: absolute
+    top: 55%
+    width: auto
+    margin-top: -1.875rem
+    padding: 1rem
+    background: #71BF2C no-repeat
+    border-radius: 100%
+    user-select: none
+    transition: 0.4s
+    height: 60px
+    visibility: visible
+  .next 
+    position: absolute
+    right: 0
+  .prev img 
+    transform: rotate(90deg)
+    margin-top: 5px
+    margin-left: -2px
+  .next img 
+    transform: rotate(-90deg)
+    margin-top: 5px
+    margin-right: -2px
+  .prev:hover, .next:hover
+    background-color: $apple-green
+
+  .dot-container
+    text-align: center
+    padding: 0 1.25rem
+
+  .dot
+    height: 0.9375rem
+    width: 0.9375rem
+    margin: 0 2px
+    background-color: rgba(0, 0, 0, 0.12)
+    border-radius: 50%
+    display: inline-block
+    transition: background-color 0.4s ease
+
+  .dot.active
+    background-color: $apple-green
 
 
 #workForYou
@@ -410,7 +532,7 @@ header
   .tech
     max-width: 1100px
     margin: 0 auto
-    padding: 150px 70px
+    padding: 120px 70px
     display: flex
 
   .tech__content
@@ -427,6 +549,7 @@ header
       padding: 40px
 
   ul.tech__tabs li
+    color: $black-50
     box-shadow: $shadow-one
     border-radius: $radius
     cursor: pointer
@@ -462,7 +585,7 @@ header
 #teamStructure
   max-width: 760px
   margin: 0 auto
-  padding: 100px 0
+  padding: 50px 0
   text-align: center
   p
     max-width: 890px
@@ -484,28 +607,39 @@ header
     font-weight: bold
     padding: 40px 45px 20px
 
+#contact-form
+  & .flex-direction
+    flex-direction: column
+  & .recapcha-wrapper
+    margin: 10px 8px
+    align-items: center
+
 @media (min-width: $screen-xm-min) and (max-width: $screen-sm-min)
   header .hero-header
+    padding: 20px 20px 0px
     &__phrase span
-      font-size: 2.5em
+      font-size: 6.5vw
       padding: 0 20px
     & h1
       padding: 20px 20px
+      
     & p
-      font-size: 2.5em
+      font-size: 6.5vw
+      line-height: 40px
+      padding: 0 20px
     & a
       margin: 20px
   header .first-sentence
-    padding: 20px
+    padding: 0 20px
 
   header .last-sentence
-    padding: 110px 20px 20px 20px
-    line-height: 45px
+    padding: 4px 20px 8px 20px
+    line-height: 20px
 
   header .down-arrow
     display: none
-
-
+  header .header-secondary-title
+    margin-top: 85px
 
   #drivenByPassion h2
     padding: 20px 20px 40px
@@ -514,11 +648,26 @@ header
   #StressFreeWizardry
     p
       font-size: $normal
+  #testimonialSlider
+    padding: 40px 0
+  #testimonialSingle:before, #testimonialSlider:before
+    min-height: 620px
+    top: 100px
+  #testimonialSingle p, #testimonialSlider p
+    font-size: 1.1em
+    line-height: 35px
+  .slideshow-container .prev, .slideshow-container .next
+    transform: scale(0.5)
+  .slideshow-container .testimonialSlides
+    padding: 2rem 3.5rem 0 3.5rem
+  .slideshow-container 
+    max-width: 100%
 
-  #testimonialSingle:before
-    min-height: 640px
-    top: 80px
-
+  #testimonialText
+    padding: 200px 0px
+    &:before
+      min-height: 750px
+   
   #workForYou
     margin: 80px 0px
     .tabs
@@ -575,23 +724,25 @@ header
 
 
 
-
 @media (min-width: $screen-sm-min) and (max-width: $screen-md-min)
   header .hero-header
     padding: 60px
     &__phrase span
-      font-size: 3.5em
+      font-size: 5.3vw
     & p
-      font-size: 3.5em
+      font-size: 5.3vw
 
   header .last-sentence
-    line-height: 65px
-    padding: 120px 0px 20px
-
-  #testimonialSingle:before
-    min-height: 550px
-    top: 50px
-
+    line-height: 40px
+    padding: 10px 0px 20px 0px
+  #testimonialSingle:before, #testimonialSlider:before
+    min-height: 600px
+    top: 90px
+  #testimonialSingle p, #testimonialSlider p
+    font-size: 1.3em
+    line-height: 39px
+  .slideshow-container 
+    max-width: 100%
   #factsAndTech
     & .facts__content
       padding: 40px 20px
@@ -606,16 +757,16 @@ header
       font-size: 14px
       padding: 16px 20px
 
-/* MOBILE FONT SIZES BY COLLEEN
 @media (max-width: 500px)
   .nav-bullets
     width: 100%
     justify-content: center
+    align-items: center
 
   .logo
     a
       img
-        width: 270px
+        width: 200px
         height: auto
 
   #StressFreeWizardry
@@ -642,11 +793,10 @@ header
       font-size: 1.6em
       padding: 100px 40px 70px 40px
 
-  #testimonialSingle
+  #testimonialSingle, #testimonialSlider
     p
       font-size: 1em
       line-height: 1.68em
-
   #teamStructure
     h2
       font-size: 1.6em
@@ -678,3 +828,14 @@ header
         &::before
           padding: 2px 12px
           top: -2px
+
+
+@media (min-width: 1600px) and (max-width: 2791px)
+  header .hero-header
+    padding: 60px
+    &__phrase span
+      font-size: 2.9vw
+    & p
+      font-size: 2.9vw
+
+

@@ -1,15 +1,22 @@
 ---
 layout: post
 title: Why Agile Adoption Fails So Often
-date: 2017-06-28
-description: Misunderstanding what agile really is.
-author: Matthew Phillip 
-excerpt:  Misunderstanding what agile really is.
-image: https://acklenavenue.com/img/posts/agile-adoption-failure-1.jpg
-thumbnail: https://acklenavenue.com/img/posts/agile-adoption-failure-1.jpg
+date: 2017-06-28T00:00:00.000Z
+description: >-
+  Is agile software development a failing concept? Why does agile adoption fails
+  so often? There is a fundamental misunderstanding of what agile actually is. 
+author: Matthew Phillip
+excerpt: >-
+  Is agile software development a failing concept? Why does agile adoption fails
+  so often? There is a fundamental misunderstanding of what agile actually is. 
+image: 'https://acklenavenue.com/img/posts/agile-adoption-failure-1.jpg'
+thumbnail: 'https://acklenavenue.com/img/posts/agile-adoption-failure-1.jpg'
 type: article
-keywords: Agile, Acklen Avenue, company, Start-up, Custom software, development, agile software, Scrum Master, product manager
+keywords: >-
+  Agile, Acklen Avenue, company, Start-up, Custom software, development, agile
+  software, Scrum Master, product manager
 tags: agile
+hidden: false
 ---
 
 > Agile is not **what** you do. Agility is **how** you do it - Dave Thomas
@@ -76,7 +83,7 @@ development is all about](https://www.visualstudio.com/learn/agile-culture/).
 Want a truly agile development team to help bring your awesome idea to life?
 
 <div style="text-align:center; padding:50px 30px;">
-  <a href="http://acklenavenue.com/" class="btn btn--apple hvr-ripple-out" >Contact Us</a>
+  <a href="http://acklenavenue.com/" class="btn btn--apple hvr-ripple-out md-trigger" >Contact Us</a>
 </div>
 
 
